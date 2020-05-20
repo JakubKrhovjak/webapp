@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+
+  mongodb:
+    image: bitnami/mongodb:latest
+    container_name: mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongo-data:/bitnami
+    restart: always
+
+
+
+
+
+
