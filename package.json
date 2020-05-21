@@ -13,6 +13,7 @@
     "cookie-parser": "^1.4.5",
     "formik": "^2.1.4",
     "formik-material-ui": "^2.0.0-beta.1",
+    "html-webpack-plugin": "^4.3.0",
     "jsonwebtoken": "^8.5.1",
     "ramda": "^0.27.0",
     "react": "^16.8.6",
@@ -32,7 +33,6 @@
     "eject": "react-scripts eject",
     "dev": "ts-node server/server.ts && react-scripts start",
     "tsc": "tsc"
-
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,10 +53,17 @@
     "@types/express": "^4.17.6",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.11.1",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/webpack": "^4.41.13",
+    "@types/webpack-env": "^1.15.2",
+    "css-loader": "^3.5.3",
     "prettier": "2.0.4",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^7.0.4",
     "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
