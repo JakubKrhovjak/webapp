@@ -25,11 +25,11 @@ const INIT_STATE = {
 export const USERNAME = "USERNAME";
 
 const reducer = (state, action) => {
-    const a = {
+    return {
         ...state,
         ...action,
     };
-    return a;
+
 };
 
 export const LoginContainer = (props) => {
