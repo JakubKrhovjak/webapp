@@ -1,15 +1,25 @@
-const path = require('path');
-var webpack = require('webpack');
+const path = require("path");
+const  HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
-    entry: './client/src/index.tsx',
+    entry: {
+        javascript: "./client/src/index.tsx",
+        // html: "./client/public/index.html",
+    },
     devtool: "source-map",
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js"
     },
+
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: false,
+        port: 3000
+    },
+
 
     module: {
         rules: [
@@ -29,22 +39,22 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.html$/,
+                loader: "file?name=[name].[ext]",
             },
         ],
-    },
-
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
     },
 
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
     },
 
-    //
-    // plugins: [
-    //     new HtmlWebpackPlugin({template: './client/src/index.html'})
-    // ]
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "public/index.esj"
+        }),
+    ]
 };
