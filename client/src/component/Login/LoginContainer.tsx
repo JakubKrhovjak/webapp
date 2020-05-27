@@ -39,7 +39,7 @@ export const LoginContainer = (props) => {
 
     const signIn = (username: string) => {
         restService
-            .post("/sign-in", username)
+            .post("/sign-in", {username})
             .then((res) => {
                 if (res.data) {
                     dispatch({ loginType: Auth.LOG_IN, username });
