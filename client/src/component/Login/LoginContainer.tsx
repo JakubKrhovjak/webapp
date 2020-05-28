@@ -85,6 +85,7 @@ export const LoginContainer = (props) => {
        if(result.status === 200) {
            restService.authenticate(values.username, values.password)
                .then(res => router.navigate("basic"))
+               .catch(e => console.error(e));
        }
 
      };

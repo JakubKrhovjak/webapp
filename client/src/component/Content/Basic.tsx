@@ -16,9 +16,9 @@ export const Basic = () => {
     },[])
 
     return(
-          <VisibleOnRoles roles={"USER"}>
+          // <VisibleOnRoles roles={"USER"}>
              <div>{content}</div>
-          </VisibleOnRoles>
+          // </VisibleOnRoles>
     )
 
 };
